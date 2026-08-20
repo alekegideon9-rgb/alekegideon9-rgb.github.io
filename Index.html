@@ -118,4 +118,290 @@
   }
   .lede .drop{
     float:left;
-    font-family:'Fraunces', s
+    font-family:'Fraunces', serif;
+    font-style:normal;
+    font-weight:600;
+    font-size:88px;
+    line-height:0.8;
+    padding:6px 10px 0 0;
+    color:var(--wine);
+  }
+
+  /* ===== Section labels ===== */
+  .section-label{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    color:var(--wine);
+    margin:0 0 28px;
+  }
+  .section-label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--rule);
+  }
+
+  section{padding:56px 0;}
+  section + section{border-top:1px solid var(--rule);}
+
+  /* ===== About ===== */
+  .about-body p{
+    font-size:17px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    max-width:64ch;
+    margin:0 0 16px;
+  }
+  .about-body strong{color:var(--ink); font-weight:600;}
+
+  /* ===== Skills ===== */
+  .skills-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    max-width:64ch;
+  }
+  .skills-list li{
+    display:flex;
+    align-items:baseline;
+    gap:20px;
+    padding:16px 0;
+    border-top:1px solid var(--rule);
+  }
+  .skills-list li:last-child{border-bottom:1px solid var(--rule);}
+  .skills-list .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.05em;
+    color:var(--wine);
+    min-width:26px;
+  }
+  .skills-list .skill-name{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:19px;
+  }
+
+  /* ===== Featured work ===== */
+  .feature-kicker{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .feature h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(30px, 5vw, 46px);
+    margin:0 0 18px;
+    line-height:1.05;
+  }
+  .feature-frame{
+    border:1px solid var(--ink);
+    padding:10px;
+    margin-bottom:26px;
+    background:var(--paper-2);
+  }
+  .feature-frame img{
+    display:block;
+    width:100%;
+    height:auto;
+    filter:grayscale(15%) contrast(1.02);
+  }
+  .feature-caption{
+    display:flex;
+    justify-content:space-between;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.05em;
+    color:var(--ink-soft);
+    padding:8px 2px 0;
+  }
+  .feature-desc{
+    font-size:17px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    max-width:64ch;
+    margin:0 0 24px;
+  }
+  .stack-list{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:0;
+    margin:0 0 28px;
+  }
+  .stack-list li{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.05em;
+    padding:6px 12px;
+    border:1px solid var(--ink);
+    color:var(--ink);
+  }
+  .feature-links{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+  .feature-links a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.05em;
+    text-decoration:none;
+    border-bottom:1px solid var(--wine);
+    padding-bottom:2px;
+    color:var(--wine);
+    transition:opacity 0.15s ease;
+  }
+  .feature-links a:hover{opacity:0.65;}
+
+  /* ===== Contact / colophon ===== */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+  }
+  @media (max-width:620px){
+    .contact-grid{grid-template-columns:1fr;}
+  }
+  .contact-btn{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    padding:20px 18px;
+    background:var(--ink);
+    color:#fff;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .contact-btn:hover{
+    background:var(--wine);
+    border-color:var(--wine);
+    transform:translateY(-2px);
+  }
+  .contact-btn .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:#9BA6C9;
+  }
+  .contact-btn:hover .label{color:#D6DEF7;}
+  .contact-btn .value{
+    font-family:'Fraunces', serif;
+    font-size:19px;
+    font-weight:450;
+    word-break:break-word;
+  }
+
+  footer{
+    padding:30px 0 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    flex-wrap:wrap;
+    gap:8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="masthead-top">
+      <span>Est. 2026 — Personal Edition</span>
+      <span>Vol. I, No. 1</span>
+    </div>
+    <div class="nameplate">
+      <span class="kicker">Portfolio</span>
+      <h1>Gideon</h1>
+      <span class="role">Software Developer &nbsp;·&nbsp; AI Engineer</span>
+      <div class="byline"><a href="https://github.com/alekegideon9-rgb" target="_blank" rel="noopener">github.com/alekegideon9-rgb ↗</a></div>
+    </div>
+  </header>
+
+  <section class="lede" aria-label="Introduction">
+    <p><span class="drop">B</span>uilding software and AI-driven products, from full working websites to the systems that power them.</p>
+  </section>
+
+  <section id="about">
+    <div class="section-label">About</div>
+    <div class="about-body">
+      <p><strong>Gideon</strong> is a software developer and AI engineer. He builds functional, production-ready web products end to end — from concept through deployment — and works with modern AI-assisted tooling to move fast without cutting corners on quality.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-label">Skills</div>
+    <ol class="skills-list">
+      <li><span class="num">01</span><span class="skill-name">Software / Website Development</span></li>
+      <li><span class="num">02</span><span class="skill-name">Programming</span></li>
+      <li><span class="num">03</span><span class="skill-name">AI Automation</span></li>
+      <li><span class="num">04</span><span class="skill-name">Prompt Engineering</span></li>
+      <li><span class="num">05</span><span class="skill-name">Data Analysis</span></li>
+    </ol>
+  </section>
+
+  <section id="work">
+    <div class="section-label">Featured Work</div>
+    <article class="feature">
+      <div class="feature-kicker">Case Study — 01</div>
+      <h3>Portofino Eateries</h3>
+      <div class="feature-frame">
+        <img src="https://portofino-eats-hub.lovable.app/assets/hero-CQBzNjtY.jpg" alt="Shawarma wrap and vegetable soup on a rustic wooden table, hero image from the Portofino Eateries website">
+        <div class="feature-caption">
+          <span>Portofino Eateries — homepage</span>
+          <span>Live site</span>
+        </div>
+      </div>
+      <p class="feature-desc">A full restaurant website built for Portofino Eateries, a dining spot in Ado Ekiti. The site covers the menu, photo gallery, about page, and contact &amp; directions, giving the restaurant a complete online presence for browsing dishes and getting in touch.</p>
+      <ul class="stack-list">
+        <li>Lovable.dev</li>
+        <li>Web</li>
+      </ul>
+      <div class="feature-links">
+        <a href="https://portofino-eats-hub.lovable.app" target="_blank" rel="noopener">View live site ↗</a>
+      </div>
+    </article>
+  </section>
+
+  <section id="contact">
+    <div class="section-label">Contact</div>
+    <div class="contact-grid">
+      <a class="contact-btn" href="mailto:alekegideon9@gmail.com">
+        <span class="label">Email</span>
+        <span class="value">alekegideon9@gmail.com</span>
+      </a>
+      <a class="contact-btn" href="tel:+2348148335413">
+        <span class="label">Phone</span>
+        <span class="value">0814 833 5413</span>
+      </a>
+      <a class="contact-btn" href="https://github.com/alekegideon9-rgb" target="_blank" rel="noopener">
+        <span class="label">GitHub</span>
+        <span class="value">alekegideon9-rgb ↗</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Gideon</span>
+    <span>Designed &amp; set in Fraunces / IBM Plex</span>
+  </footer>
+</div>
+
+</body>
+  </html>
