@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gideon — Software Developer &amp; AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F6F8;
+    --paper-2:#EDEFF3;
+    --ink:#0B0E14;
+    --ink-soft:#4A4F5A;
+    --wine:#1247E0;
+    --brass:#0B0E14;
+    --rule:#D3D7E0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  a{color:inherit;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--wine); outline-offset:3px;}
+
+  .wrap{
+    max-width:880px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ===== Masthead ===== */
+  header.masthead{
+    padding:40px 0 0;
+    border-bottom:3px solid var(--ink);
+  }
+  .masthead-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    padding-bottom:18px;
+    border-bottom:1px solid var(--rule);
+    flex-wrap:wrap;
+    gap:6px 16px;
+  }
+  .nameplate{
+    text-align:center;
+    padding:34px 0 26px;
+  }
+  .nameplate h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(56px, 12vw, 108px);
+    letter-spacing:-0.01em;
+    margin:0;
+    line-height:0.95;
+  }
+  .nameplate .kicker{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--wine);
+    margin-bottom:14px;
+  }
+  .nameplate .role{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight:500;
+    font-size:15px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:16px;
+  }
+  .nameplate .byline{
+    margin-top:14px;
+  }
+  .nameplate .byline a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.05em;
+    text-decoration:none;
+    color:var(--wine);
+    border-bottom:1px solid var(--wine);
+    padding-bottom:1px;
+  }
+  .nameplate .byline a:hover{opacity:0.7;}
+
+  /* ===== Hero statement ===== */
+  .lede{
+    padding:54px 0 60px;
+    border-bottom:1px solid var(--rule);
+  }
+  .lede p{
+    font-family:'Fraunces', serif;
+    font-weight:450;
+    font-style:italic;
+    font-size:clamp(26px, 4vw, 38px);
+    line-height:1.35;
+    margin:0;
+    color:var(--ink);
+  }
+  .lede .drop{
+    float:left;
+    font-family:'Fraunces', s
